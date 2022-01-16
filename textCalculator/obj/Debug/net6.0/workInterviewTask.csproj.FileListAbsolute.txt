@@ -1,0 +1,15 @@
+F:\3_DavidDocuments\Work\SOFT-UNI\Advanced\StackAndQueue\workInterviewTask\bin\Debug\net6.0\workInterviewTask.exe
+F:\3_DavidDocuments\Work\SOFT-UNI\Advanced\StackAndQueue\workInterviewTask\bin\Debug\net6.0\workInterviewTask.deps.json
+F:\3_DavidDocuments\Work\SOFT-UNI\Advanced\StackAndQueue\workInterviewTask\bin\Debug\net6.0\workInterviewTask.runtimeconfig.json
+F:\3_DavidDocuments\Work\SOFT-UNI\Advanced\StackAndQueue\workInterviewTask\bin\Debug\net6.0\workInterviewTask.dll
+F:\3_DavidDocuments\Work\SOFT-UNI\Advanced\StackAndQueue\workInterviewTask\bin\Debug\net6.0\ref\workInterviewTask.dll
+F:\3_DavidDocuments\Work\SOFT-UNI\Advanced\StackAndQueue\workInterviewTask\bin\Debug\net6.0\workInterviewTask.pdb
+F:\3_DavidDocuments\Work\SOFT-UNI\Advanced\StackAndQueue\workInterviewTask\obj\Debug\net6.0\workInterviewTask.csproj.AssemblyReference.cache
+F:\3_DavidDocuments\Work\SOFT-UNI\Advanced\StackAndQueue\workInterviewTask\obj\Debug\net6.0\workInterviewTask.GeneratedMSBuildEditorConfig.editorconfig
+F:\3_DavidDocuments\Work\SOFT-UNI\Advanced\StackAndQueue\workInterviewTask\obj\Debug\net6.0\workInterviewTask.AssemblyInfoInputs.cache
+F:\3_DavidDocuments\Work\SOFT-UNI\Advanced\StackAndQueue\workInterviewTask\obj\Debug\net6.0\workInterviewTask.AssemblyInfo.cs
+F:\3_DavidDocuments\Work\SOFT-UNI\Advanced\StackAndQueue\workInterviewTask\obj\Debug\net6.0\workInterviewTask.csproj.CoreCompileInputs.cache
+F:\3_DavidDocuments\Work\SOFT-UNI\Advanced\StackAndQueue\workInterviewTask\obj\Debug\net6.0\workInterviewTask.dll
+F:\3_DavidDocuments\Work\SOFT-UNI\Advanced\StackAndQueue\workInterviewTask\obj\Debug\net6.0\ref\workInterviewTask.dll
+F:\3_DavidDocuments\Work\SOFT-UNI\Advanced\StackAndQueue\workInterviewTask\obj\Debug\net6.0\workInterviewTask.pdb
+F:\3_DavidDocuments\Work\SOFT-UNI\Advanced\StackAndQueue\workInterviewTask\obj\Debug\net6.0\workInterviewTask.genruntimeconfig.cache
