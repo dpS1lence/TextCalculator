@@ -10,70 +10,62 @@ namespace Name
     {
         static void Main()
         {
-            // default values................
-            string word = "";
-            string equation = "";
-            string equationTmp = "";
             string[] textNumbers = { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "minus", "plus" };
-            int n = 0;
-            string tmpForNumber = "";
-            int answerInNumber = 0;
-            string tmpForAnswer = "";
-            string answerInString = "";
             string input = Console.ReadLine();
-            // from text numbers to string equation
-            for (int i = 0; i < input.Length; i++)
+
+            int n = 0;
+            foreach (var number in textNumbers)
             {
-                word += input[i];
-                foreach (string s in textNumbers)
-                {
-                    if (s == word)
-                    {
-                        if (n == 10) equation += "-";
-                        else if (n == 11) equation += "+";
-                        else equation += $"{n}";
-                        word = "";
-                    }
-                    n++;
-                }
-                n = 0;
+                if (n == 10) input = input.Replace(number, "-");
+                else if (n == 11) input = input.Replace(number, "+");
+                else input = input.Replace(number, n.ToString());
+                n++;
             }
-            equationTmp = equation;
-            //from string equation to calculation
-            string firstEqualatinElement = equation.Substring(0, 1);
+            string inputTmp = input;
+
+            int answerInNumber = Calculate(input);
+
+            char[] numbers = answerInNumber.ToString().ToCharArray();
+            string answerInString = "";
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                if (numbers[i].ToString() == "-") answerInString += "minus";
+                else answerInString += textNumbers[int.Parse(numbers[i].ToString())];
+            }
+
+            string output = $"input -> {inputTmp}\nAnswer in number -> {answerInNumber}\nAnswer in string -> {answerInString}";
+            Console.WriteLine(output);
+
+        }
+
+        static int Calculate(string input)
+        {
+            string tmpForNumber = "";
+            string firstEqualatinElement = input.Substring(0, 1);
             if (firstEqualatinElement == "-" || firstEqualatinElement == "+")
             {
                 tmpForNumber += firstEqualatinElement;
-                equation = equation.Substring(1);
-                firstEqualatinElement = equation.Substring(0, 1);
+                input = input.Substring(1);
+                firstEqualatinElement = input.Substring(0, 1);
             }
-            while (equation.Length > 0)
+
+            int answerInNumber = 0;
+            while (input.Length > 0)
             {
                 tmpForNumber += firstEqualatinElement;
-                equation = equation.Substring(1);
-                if (equation.Length > 0) firstEqualatinElement = equation.Substring(0, 1);
+                input = input.Substring(1);
+                if (input.Length > 0) firstEqualatinElement = input.Substring(0, 1);
                 else answerInNumber += int.Parse(tmpForNumber);
                 if (firstEqualatinElement == "-" || firstEqualatinElement == "+")
                 {
                     answerInNumber += int.Parse(tmpForNumber);
                     tmpForNumber = "";
                     tmpForNumber += firstEqualatinElement;
-                    equation = equation.Substring(1);
-                    firstEqualatinElement = equation.Substring(0, 1);
+                    input = input.Substring(1);
+                    firstEqualatinElement = input.Substring(0, 1);
                 }
             }
-            // from calculation to answer in text numbers
-            char[] numbers = answerInNumber.ToString().ToCharArray();
-            for (int i = 0; i < numbers.Length; i++)
-            {
-                if (numbers[i].ToString() == "-") answerInString += "minus";
-                else answerInString += textNumbers[int.Parse(numbers[i].ToString())];
-            }
-            // output
-
-            string output = $"Equation -> {equationTmp}\nAnswer in number -> {answerInNumber}\nAnswer in string -> {answerInString}";
-            Console.WriteLine(output);
-
+            return answerInNumber;
         }
     }
 }
